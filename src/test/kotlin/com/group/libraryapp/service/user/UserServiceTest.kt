@@ -5,7 +5,6 @@ import com.group.libraryapp.domain.user.UserRepository
 import com.group.libraryapp.dto.user.request.UserCreateRequest
 import com.group.libraryapp.dto.user.request.UserUpdateRequest
 import jakarta.transaction.Transactional
-import org.assertj.core.api.Assertions.`as`
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
@@ -58,8 +57,13 @@ class UserServiceTest @Autowired constructor(
   fun updateTest() {
 
     // given
-    val saveUser = userRepository.save(User("김현겸", 25))
-    val request = UserUpdateRequest(saveUser.id, "rlagusrua")
+    val saveJavaUser = userRepository.save(
+      User(
+        "김현겸",
+        25
+      )
+    )
+    val request = UserUpdateRequest(saveJavaUser.id!!, "rlagusrua")
 
     // when
     userService.updateUserName(request)
@@ -74,7 +78,12 @@ class UserServiceTest @Autowired constructor(
   fun deleteTest() {
 
     // given
-    val saveUser = userRepository.save(User("김현겸", 25))
+    val saveJavaUser = userRepository.save(
+      User(
+        "김현겸",
+        25
+      )
+    )
 
     // when
     userService.deleteUser("김현겸")
