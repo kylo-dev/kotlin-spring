@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.group.libraryapp.service.user.UserServiceTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-11-10T09:44:33" hostname="gyeom-MacBookPro.local" time="0.043">
+  <properties/>
+  <testcase name="saveTest()" classname="com.group.libraryapp.service.user.UserServiceTest" time="0.005"/>
+  <testcase name="updateTest()" classname="com.group.libraryapp.service.user.UserServiceTest" time="0.008"/>
+  <testcase name="deleteTest()" classname="com.group.libraryapp.service.user.UserServiceTest" time="0.009"/>
+  <testcase name="getUserTest()" classname="com.group.libraryapp.service.user.UserServiceTest" time="0.018"/>
+  <system-out><![CDATA[2024-11-10T18:44:33.289+09:00  INFO 74071 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.group.libraryapp.service.user.UserServiceTest]: UserServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-11-10T18:44:33.295+09:00  INFO 74071 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.group.libraryapp.LibraryAppApplication for test class com.group.libraryapp.service.user.UserServiceTest
+Hibernate: 
+    insert 
+    into
+        users
+        (age, name, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.age,
+        u1_0.name 
+    from
+        users u1_0
+Hibernate: 
+    insert 
+    into
+        users
+        (age, name, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    update
+        users 
+    set
+        age=?,
+        name=? 
+    where
+        id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.age,
+        u1_0.name 
+    from
+        users u1_0
+Hibernate: 
+    insert 
+    into
+        users
+        (age, name, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.age,
+        u1_0.name 
+    from
+        users u1_0 
+    where
+        u1_0.name=?
+Hibernate: 
+    delete 
+    from
+        users 
+    where
+        id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.age,
+        u1_0.name 
+    from
+        users u1_0
+Hibernate: 
+    insert 
+    into
+        users
+        (age, name, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        users
+        (age, name, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.age,
+        u1_0.name 
+    from
+        users u1_0
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

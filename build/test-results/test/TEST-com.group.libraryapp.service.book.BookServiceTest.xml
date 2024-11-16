@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.group.libraryapp.service.book.BookServiceTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-11-10T09:44:33" hostname="gyeom-MacBookPro.local" time="0.161">
+  <properties/>
+  <testcase name="실패한_책_대출하기()" classname="com.group.libraryapp.service.book.BookServiceTest" time="0.121"/>
+  <testcase name="정상적인_책_대출하기()" classname="com.group.libraryapp.service.book.BookServiceTest" time="0.019"/>
+  <testcase name="책_등록이_정상_동작한다()" classname="com.group.libraryapp.service.book.BookServiceTest" time="0.004"/>
+  <testcase name="정상적인_책_반납하기()" classname="com.group.libraryapp.service.book.BookServiceTest" time="0.014"/>
+  <system-out><![CDATA[2024-11-10T18:44:33.113+09:00  INFO 74071 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.group.libraryapp.service.book.BookServiceTest]: BookServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-11-10T18:44:33.121+09:00  INFO 74071 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.group.libraryapp.LibraryAppApplication for test class com.group.libraryapp.service.book.BookServiceTest
+Hibernate: 
+    insert 
+    into
+        book
+        (name, id) 
+    values
+        (?, default)
+Hibernate: 
+    insert 
+    into
+        users
+        (age, name, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        user_loan_history
+        (book_name, is_return, user_id, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    select
+        b1_0.id,
+        b1_0.name 
+    from
+        book b1_0 
+    where
+        b1_0.name=?
+Hibernate: 
+    select
+        ulh1_0.id,
+        ulh1_0.book_name,
+        ulh1_0.is_return,
+        ulh1_0.user_id 
+    from
+        user_loan_history ulh1_0 
+    where
+        ulh1_0.book_name=? 
+        and ulh1_0.is_return=?
+Hibernate: 
+    insert 
+    into
+        book
+        (name, id) 
+    values
+        (?, default)
+Hibernate: 
+    insert 
+    into
+        users
+        (age, name, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        b1_0.id,
+        b1_0.name 
+    from
+        book b1_0 
+    where
+        b1_0.name=?
+Hibernate: 
+    select
+        ulh1_0.id,
+        ulh1_0.book_name,
+        ulh1_0.is_return,
+        ulh1_0.user_id 
+    from
+        user_loan_history ulh1_0 
+    where
+        ulh1_0.book_name=? 
+        and ulh1_0.is_return=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.age,
+        u1_0.name 
+    from
+        users u1_0 
+    where
+        u1_0.name=?
+Hibernate: 
+    insert 
+    into
+        user_loan_history
+        (book_name, is_return, user_id, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    select
+        ulh1_0.id,
+        ulh1_0.book_name,
+        ulh1_0.is_return,
+        ulh1_0.user_id 
+    from
+        user_loan_history ulh1_0
+Hibernate: 
+    insert 
+    into
+        book
+        (name, id) 
+    values
+        (?, default)
+Hibernate: 
+    select
+        b1_0.id,
+        b1_0.name 
+    from
+        book b1_0
+Hibernate: 
+    insert 
+    into
+        book
+        (name, id) 
+    values
+        (?, default)
+Hibernate: 
+    insert 
+    into
+        users
+        (age, name, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        user_loan_history
+        (book_name, is_return, user_id, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.age,
+        u1_0.name 
+    from
+        users u1_0 
+    where
+        u1_0.name=?
+Hibernate: 
+    update
+        user_loan_history 
+    set
+        book_name=?,
+        is_return=?,
+        user_id=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ulh1_0.id,
+        ulh1_0.book_name,
+        ulh1_0.is_return,
+        ulh1_0.user_id 
+    from
+        user_loan_history ulh1_0
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

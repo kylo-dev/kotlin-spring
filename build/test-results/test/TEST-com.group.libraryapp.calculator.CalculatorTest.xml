@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.group.libraryapp.calculator.CalculatorTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-11-10T09:44:33" hostname="gyeom-MacBookPro.local" time="0.028">
+  <properties/>
+  <testcase name="addTest()" classname="com.group.libraryapp.calculator.CalculatorTest" time="0.028"/>
+  <testcase name="minus()" classname="com.group.libraryapp.calculator.CalculatorTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

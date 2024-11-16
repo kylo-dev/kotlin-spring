@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - BookServiceTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>BookServiceTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.group.libraryapp.service.book.html">com.group.libraryapp.service.book</a> &gt; BookServiceTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">4</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.158s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">실패한_책_대출하기()</td>
+<td class="success">0.121s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">정상적인_책_대출하기()</td>
+<td class="success">0.019s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">정상적인_책_반납하기()</td>
+<td class="success">0.014s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">책_등록이_정상_동작한다()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2024-11-10T18:44:33.113+09:00  INFO 74071 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.group.libraryapp.service.book.BookServiceTest]: BookServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-11-10T18:44:33.121+09:00  INFO 74071 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.group.libraryapp.LibraryAppApplication for test class com.group.libraryapp.service.book.BookServiceTest
+Hibernate: 
+    insert 
+    into
+        book
+        (name, id) 
+    values
+        (?, default)
+Hibernate: 
+    insert 
+    into
+        users
+        (age, name, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        user_loan_history
+        (book_name, is_return, user_id, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    select
+        b1_0.id,
+        b1_0.name 
+    from
+        book b1_0 
+    where
+        b1_0.name=?
+Hibernate: 
+    select
+        ulh1_0.id,
+        ulh1_0.book_name,
+        ulh1_0.is_return,
+        ulh1_0.user_id 
+    from
+        user_loan_history ulh1_0 
+    where
+        ulh1_0.book_name=? 
+        and ulh1_0.is_return=?
+Hibernate: 
+    insert 
+    into
+        book
+        (name, id) 
+    values
+        (?, default)
+Hibernate: 
+    insert 
+    into
+        users
+        (age, name, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        b1_0.id,
+        b1_0.name 
+    from
+        book b1_0 
+    where
+        b1_0.name=?
+Hibernate: 
+    select
+        ulh1_0.id,
+        ulh1_0.book_name,
+        ulh1_0.is_return,
+        ulh1_0.user_id 
+    from
+        user_loan_history ulh1_0 
+    where
+        ulh1_0.book_name=? 
+        and ulh1_0.is_return=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.age,
+        u1_0.name 
+    from
+        users u1_0 
+    where
+        u1_0.name=?
+Hibernate: 
+    insert 
+    into
+        user_loan_history
+        (book_name, is_return, user_id, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    select
+        ulh1_0.id,
+        ulh1_0.book_name,
+        ulh1_0.is_return,
+        ulh1_0.user_id 
+    from
+        user_loan_history ulh1_0
+Hibernate: 
+    insert 
+    into
+        book
+        (name, id) 
+    values
+        (?, default)
+Hibernate: 
+    select
+        b1_0.id,
+        b1_0.name 
+    from
+        book b1_0
+Hibernate: 
+    insert 
+    into
+        book
+        (name, id) 
+    values
+        (?, default)
+Hibernate: 
+    insert 
+    into
+        users
+        (age, name, id) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        user_loan_history
+        (book_name, is_return, user_id, id) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.age,
+        u1_0.name 
+    from
+        users u1_0 
+    where
+        u1_0.name=?
+Hibernate: 
+    update
+        user_loan_history 
+    set
+        book_name=?,
+        is_return=?,
+        user_id=? 
+    where
+        id=?
+Hibernate: 
+    select
+        ulh1_0.id,
+        ulh1_0.book_name,
+        ulh1_0.is_return,
+        ulh1_0.user_id 
+    from
+        user_loan_history ulh1_0
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.2</a> at 2024. 11. 10. 오후 6:44:33</p>
+</div>
+</div>
+</body>
+</html>
