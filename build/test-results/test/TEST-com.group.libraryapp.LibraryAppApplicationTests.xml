@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.group.libraryapp.LibraryAppApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-11-17T06:58:23" hostname="gyeom-MacBookPro.local" time="0.003">
-  <properties/>
-  <testcase name="contextLoads()" classname="com.group.libraryapp.LibraryAppApplicationTests" time="0.003"/>
-  <system-out><![CDATA[2024-11-17T15:58:23.191+09:00  INFO 52307 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.group.libraryapp.LibraryAppApplicationTests]: LibraryAppApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2024-11-17T15:58:23.195+09:00  INFO 52307 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.group.libraryapp.LibraryAppApplication for test class com.group.libraryapp.LibraryAppApplicationTests
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
