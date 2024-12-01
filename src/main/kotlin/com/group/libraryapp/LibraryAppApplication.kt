@@ -1,1 +1,11 @@
-package com.group.libraryappimport org.springframework.boot.autoconfigure.SpringBootApplicationimport org.springframework.boot.runApplication@SpringBootApplicationclass LibraryAppApplicationfun main(args: Array<String>) {  runApplication<LibraryAppApplication>(*args)}
+package com.group.libraryapp
+
+import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.boot.runApplication
+
+@SpringBootApplication
+class LibraryAppApplication
+
+fun main(args: Array<String>) {
+  runApplication<LibraryAppApplication>(*args)
+}
