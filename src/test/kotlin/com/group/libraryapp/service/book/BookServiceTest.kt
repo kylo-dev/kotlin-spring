@@ -2,6 +2,7 @@ package com.group.libraryapp.service.book
 
 import com.group.libraryapp.domain.book.Book
 import com.group.libraryapp.domain.book.BookRepository
+import com.group.libraryapp.domain.book.BookType
 import com.group.libraryapp.domain.user.User
 import com.group.libraryapp.domain.user.UserRepository
 import com.group.libraryapp.domain.user.loadhistory.UserLoanHistory
@@ -29,7 +30,7 @@ class BookServiceTest @Autowired constructor(
   fun 책_등록이_정상_동작한다() {
 
     // given
-    val request = BookRequest("인프런", "컴퓨터")
+    val request = BookRequest("인프런", BookType.COMPUTER)
 
     // when
     bookService.saveBook(request)
@@ -38,6 +39,7 @@ class BookServiceTest @Autowired constructor(
     val results = bookRepository.findAll()
     assertThat(results).hasSize(1)
     assertThat(results[0].name).isEqualTo("인프런")
+    assertThat(results[0].type).isEqualTo(BookType.COMPUTER)
 
   }
 

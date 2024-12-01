@@ -8,7 +8,7 @@ import jakarta.persistence.Id
 @Entity
 class Book(
   val name: String,
-  val type: String,
+  val type: BookType,
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,7 +26,7 @@ class Book(
   companion object {
     fun fixture(
       name: String = "인프런",
-      type: String = "COMPUTER",
+      type: BookType = BookType.COMPUTER,
       id: Long? = null,
     ): Book {
       return Book(
