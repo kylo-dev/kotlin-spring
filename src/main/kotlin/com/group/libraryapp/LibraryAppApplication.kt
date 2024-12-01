@@ -1,0 +1,1 @@
+package com.group.libraryappimport org.springframework.boot.autoconfigure.SpringBootApplicationimport org.springframework.boot.runApplication@SpringBootApplicationclass LibraryAppApplicationfun main(args: Array<String>) {  runApplication<LibraryAppApplication>(*args)}
