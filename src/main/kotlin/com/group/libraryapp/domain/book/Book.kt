@@ -1,13 +1,11 @@
 package com.group.libraryapp.domain.book
 
-import jakarta.persistence.Entity
-import jakarta.persistence.GeneratedValue
-import jakarta.persistence.GenerationType
-import jakarta.persistence.Id
+import jakarta.persistence.*
 
 @Entity
 class Book(
   val name: String,
+  @Enumerated(value = EnumType.STRING)
   val type: BookType,
 
   @Id
