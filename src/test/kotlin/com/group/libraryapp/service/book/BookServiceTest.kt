@@ -29,7 +29,7 @@ class BookServiceTest @Autowired constructor(
   fun 책_등록이_정상_동작한다() {
 
     // given
-    val request = BookRequest("인프런")
+    val request = BookRequest("인프런", "컴퓨터")
 
     // when
     bookService.saveBook(request)
@@ -45,11 +45,7 @@ class BookServiceTest @Autowired constructor(
   fun 정상적인_책_대출하기() {
 
     // given
-    val savedJavaBook = bookRepository.save(
-      Book(
-        "인프런"
-      )
-    )
+    val savedJavaBook = bookRepository.save(Book.fixture())
     val savedJavaUser = userRepository.save(
       User(
         "김현겸",
@@ -75,9 +71,7 @@ class BookServiceTest @Autowired constructor(
 
     // given
     val savedJavaBook = bookRepository.save(
-      Book(
-        "인프런"
-      )
+      Book.fixture()
     )
     val savedJavaUser = userRepository.save(
       User(
@@ -107,9 +101,7 @@ class BookServiceTest @Autowired constructor(
 
     // given
     val savedJavaBook = bookRepository.save(
-      Book(
-        "인프런"
-      )
+      Book.fixture()
     )
     val savedJavaUser = userRepository.save(
       User(
