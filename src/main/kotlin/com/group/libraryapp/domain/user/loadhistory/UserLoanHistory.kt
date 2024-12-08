@@ -11,7 +11,7 @@ class UserLoanHistory(
 
   val bookName: String,
 
-  var status: UserLoanStatus = UserLoanStatus.LOANED,
+  var isReturn: Boolean,
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,26 +19,6 @@ class UserLoanHistory(
 ) {
 
   fun doReturn() {
-    this.status = UserLoanStatus.RETURNED
-  }
-
-  val isReturn: Boolean
-    get() = this.status == UserLoanStatus.RETURNED
-
-  init {
-    user.userLoanHistory.add(this)
-  }
-
-  companion object {
-    fun fixture(
-      user: User,
-      bookName: String,
-      status: UserLoanStatus = UserLoanStatus.LOANED,
-      id: Long? = null,
-    ) : UserLoanHistory {
-      return UserLoanHistory(
-        user, bookName, status
-      )
-    }
+    this.isReturn = true
   }
 }
