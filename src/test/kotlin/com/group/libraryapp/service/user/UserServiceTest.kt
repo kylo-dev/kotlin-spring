@@ -1,7 +1,7 @@
 package com.group.libraryapp.service.user
 
 import com.group.libraryapp.domain.user.User
-import com.group.libraryapp.domain.user.UserRepository
+import com.group.libraryapp.repository.user.UserRepository
 import com.group.libraryapp.domain.user.loadhistory.UserLoanHistory
 import com.group.libraryapp.domain.user.loadhistory.UserLoanHistoryRepository
 import com.group.libraryapp.domain.user.loadhistory.UserLoanStatus
